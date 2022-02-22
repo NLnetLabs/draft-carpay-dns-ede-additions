@@ -1,7 +1,7 @@
 ---
-title: Addtional Extended DNS Error codes for resolvers
-abbrev: EDE additions
-docname: draft-carpay-dns-ede-additions
+title: Extra Extended DNS Error codes for DNSSEC status bogus
+abbrev: Extra DNSSEC EDE codes
+docname: draft-carpay-extra-ede-codes-dnssec-bogus
 date: {DATE}
 
 keyword: Internet-Draft
@@ -20,13 +20,28 @@ author:
     org: NLnet Labs
     email: willem@nlnetlabs.nl
 
+informative:
+  title: EDE for Unbound pull request
+  author:
+  -
+    name: Tom Carpay
+    org: NLnet Labs
+    email: tom@nlnetlabs.nl
+  -
+    name: Willem Toorop
+    org: NLnet Labs
+    email: willem@nlnetlabs.nl
+  target: https://github.com/NLnetLabs/unbound/pull/604/
 
 --- middle
 
 # Introduction
 
-This draft is an extension on RFC 8914 and proposes a set of new Extended DNS 
-Error (EDE) codes.
+NORMATIVE
+While implementing Extended DNS Errors ({{!RFC8914}}) in our DNSSEC validating resolver software Unbound 
+   
+INFORMATIVE (ref to the ), we encountered this specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined. 
+
 
 
 ## Extended DNS Error Code 26 - Signature Wrong Size
@@ -54,9 +69,9 @@ The resolver attempted to perform DNSSEC validation, but the signed response doe
 The resolver attempted to perform DNSSEC validation, but found a value not equal to 3 in the DNSKEY protocol number field as specified by RFC4034#section-2.1.2.
 
 
-
 # IANA Considerations
 
-This draft requires the assignment of a new EDE code values for the specified EDE
+This draft requests the assignment of a new EDE code values for the specified EDE
 codes.
+
 --- back

@@ -12,7 +12,7 @@
 ]>
 
 
-<rfc docName="draft-carpay-extra-ede-codes-dnssec-bogus">
+<rfc docName="draft-carpay-extra-ede-codes-dnssec-bogus" category="exp" submissionType="IETF" ipr="trust200902">
   <front>
     <title abbrev="Extra DNSSEC EDE codes">Extra Extended DNS Error codes for DNSSEC status bogus</title>
 
@@ -37,7 +37,7 @@
 
     <abstract>
 
-
+      <t>While implementing Extended DNS Errors (<xref target="RFC8914"/>) in our DNSSEC validating resolver software Unbound (<xref target="UNBOUNDPR"/>), we encountered this specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined.</t>
 
     </abstract>
 

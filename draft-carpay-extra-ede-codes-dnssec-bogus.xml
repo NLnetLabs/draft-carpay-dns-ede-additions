@@ -37,7 +37,7 @@
 
     <abstract>
 
-      <t>While implementing Extended DNS Errors (<xref target="RFC8914"/>) in our DNSSEC validating resolver software Unbound (<xref target="UNBOUNDPR"/>), we encountered this specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined.</t>
+      <t>While implementing Extended DNS Errors ("RFC8914) in our DNSSEC validating resolver software Unbound, we encountered this specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined.</t>
 
     </abstract>
 

@@ -13,7 +13,7 @@ Expires: 27 August 2022                                 23 February 2022
 
 Abstract
 
-   While implementing Extended DNS Errors ("RFC8914) in our DNSSEC
+   While implementing Extended DNS Errors (RFC8914) in our DNSSEC
    validating resolver software Unbound, we encountered this specific
    situations regarding the DNSSEC bogus status where no Extended DNS
    Error were yet defined.

@@ -50,10 +50,7 @@
 
 <section anchor="introduction"><name>Introduction</name>
 
-<t>NORMATIVE
-While implementing Extended DNS Errors (<xref target="RFC8914"/>) in our DNSSEC validating resolver software Unbound</t>
-
-<t>INFORMATIVE (ref to the ), we encountered this specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined.</t>
+<t>While implementing Extended DNS Errors (<xref target="RFC8914"/>) in our DNSSEC validating resolver software Unbound (<xref target="UNBOUNDPR"/>), we encountered this specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined.</t>
 
 <section anchor="extended-dns-error-code-26-signature-wrong-size"><name>Extended DNS Error Code 26 - Signature Wrong Size</name>
 
@@ -124,33 +121,50 @@ codes.</t>
 
     </references>
 
+    <references title='Informative References'>
+
+<reference anchor="UNBOUNDPR" target="https://github.com/NLnetLabs/unbound/pull/604/">
+  <front>
+    <title>EDE for Unbound pull request</title>
+    <author initials="T." surname="Carpay" fullname="Tom Carpay">
+      <organization>NLnet Labs</organization>
+    </author>
+    <author initials="W." surname="Toorop" fullname="Willem Toorop">
+      <organization>NLnet Labs</organization>
+    </author>
+    <date year="n.d."/>
+  </front>
+</reference>
+
+
+    </references>
 
 
 
   </back>
 
 <!-- ##markdown-source:
-H4sIAPrnFGIAA71WTW/bPAy+61dw6GEtMDv9wj5yWtGmQLEte9FmK3YaZItO
-hMqSJ8nJsqL//SXlOEuGoj1kmA9BIJHPB0XKzrJMRB0NDmH0M3rJv2gVKrgY
-38DIe+ehdAoDVPSP1m5G5xCijG2Awk3bIGRReJz36auI0cWoSxPKlVbWBK+8
-rGJWSt/IZYYcnKHCLEVlyoaAZdYhKhkp/v7ibDJ6EOIOlwvn1RCubERvMWYX
-jCQEqbDquzTOUvSSqIRs48z5oYBMAD3ahiFMcjhPnGmpkzJx9eai89MhjD8S
-NHyURUhrWEtthhBd/d4a2jG0kVuzBX2bE5LzrtmAvtXGYL25/gT6IgVvEwht
-qdK1jHqO5AT6w6GC8gl8sYVrrYKmNQY8/mgxRIpaO1/p293nFtDOrsiH9FOM
-Q5jF2IThYDDVcdYWeenqQYJhlEHbuRuwu8Hrw9OBEFmWQa2VMijEHveAd6ot
-o3ZWiPHn609nk6uvI3E70wZB1w0xo43aTh9p5AD79/cvri/P3747On14OKBT
-BNeuu3oujabW41yPwZk5egiuigvpcV13Niquxpc9M+x7rKh8EGcIB69ggYC2
-pFDqVeKOMx0gNFjqSpcQdGwlSw/EMJVeMRcnrhSk9u+nazEjBLDusYlc8NaS
-aq+w0hZVDoKevb3HYs9pwOD4NWRwo6eWoCn11jtivtG/qKgT4l/7lTFi3URW
-7qBBz634Z32cfQVFG5PwsIYkn0hHyjWrJTWApxYBw4fuKVJawJ9UBkbmNk65
-XVloRZqp85Rc50+beEMmPknDomiX7RD4mDp0Rxcd0suQsOBSo1HcG9sGS2ej
-pLkHCfVaQ+g07KsDHpRn5L9dncFKNHwmelfBL7rA/oUB5egWty72TtI2k6ch
-ZyW8ULp56tzr64DxGUPvtpqKJhgN7VDvdw22oynb1gW3UUVtRMihd/QHY+j9
-ckDpvKcue1r3ySHpXhFf2dBWNJuabg0Y88p/3rnqL4wFBVN+Q8O+UfqZnGOX
-0ZE1TPaM2qPfar/YO+sWljVGVzqzg8wqXWeS11tM2uhlIg1nnvSVptQPo28s
-MrH1J1KlesuwMcHFEuhePT08Od2j9zizZMf5UX6ci3Rrn43PyIwNWqHvLkBW
-TieWPgr691hIpDJw9fgW56OXYHGx/pzo1IZHrhCKEOlTIu9eGYUs78T/3+/9
-ed0IAAA=
+H4sIAN8AFmIAA71WXW8TOxB9968Y1AdAYjf9Ehf2idIECQEB9UPVfULe9Wxi
+1WsvtjchVP3vzHi7uQk3tA9F7ENV2TNnzsycGSfLMhF1NFjA5Hv0kv+iVahg
+PD2HiffOQ+UUBqjpPzo7n5xCiDJ2AUo364KQZelxMbjfWUzGk95NKFdZ2RC8
+8rKOWSV9K1cZsnGGCrNklSkbAlZZj6hkJPub8cnF5FaIa1wtnVcFvLcRvcWY
+jRlJCGJh1VdpnCXrFYUSsotz5wsBmQD6tA0FXORwmmKmo57KhWs2D52fFTD9
+SNDwUZYhnWEjtSkguuaNNXRj6CK3Zgv6Kick5127AX2ljcFm8/we9GUy3g4g
+tKVKNzLqBVImcDl9+/lyOv5yViTPoVdUX27IpS1dZxW0nTHg8VuHISa7dSno
+6yn/JvndBLdd/p/Ubq8o/QxjAfMY21CMRjMd512ZV64ZJUs2HHU95RFTHr3c
+Px4JkWUZNFopg0LscZ+9U10VtbNCXM21QdBNSwzQRm1nOyQa4NnNzZOzd6ev
+Xh8c394+p/6A69Z6XUijSVTs6zE4s0APwdVxKT2uS0gI61oTxAtYIqCt6I5k
+R8HiXAcILVa61hUEHTvJDANBzqRXDB7nOIRMSh4GZTknBLBu13At+WpFVVRY
+a4sqB0Hf3t4u21OaFTh8CRmc65klaHK98o4in+sfVLsLir9OUMaITRuZuYMW
+Pavq14I4+wLKLibiYQ1JeSJ1jovUSOq8p2aD4d56spQW8DuVgZFZgsm3Lwud
+SDNznpyb/P4k/qEkPknDpOiW0yHwKantkVn0SE9DwoJ3Go1iMWwnWDkbJY0w
+SGjWHELP4Zl6zqJ/gP6rux7ckYbPFN7V8IN20d9IQDlayNbFIZN0zcHTwDIT
+PqjcIin37CxgfCCh11uiokFFQzek/V5gj0zKdk3JMqpJRoQchox+iRiGfNmg
+ct6Tyu7nfbRPvO8Cv7ehq2k2Na0JmPLJF+9c/QfGgozJv6Vh3yj9XC6w9+iD
+tRzsAbYH/7G9tNfWLS1zjK5y5hE067S/JJ93mLjRQyANex4NlSbXD5N/mWSK
+NnSkTvWWYWOCyxXQIj3ePzreoyeZo2SH+UF+mIu0nE+mJ5SMDVqh7xcgM6eO
+pfd9eINCCioDV4/XNrdegsXl+pdBzzbsWCFkIdKvgrx/GUpZXYuf703ut6gI
+AAA=
 
 -->
 

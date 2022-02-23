@@ -21,26 +21,22 @@ author:
     email: willem@nlnetlabs.nl
 
 informative:
-  title: EDE for Unbound pull request
-  author:
-  -
-    name: Tom Carpay
-    org: NLnet Labs
-    email: tom@nlnetlabs.nl
-  -
-    name: Willem Toorop
-    org: NLnet Labs
-    email: willem@nlnetlabs.nl
-  target: https://github.com/NLnetLabs/unbound/pull/604/
+  UNBOUNDPR:
+    title: EDE for Unbound pull request
+    author:
+    -
+      name: Tom Carpay
+      org: NLnet Labs
+    -
+      name: Willem Toorop
+      org: NLnet Labs
+    target: https://github.com/NLnetLabs/unbound/pull/604/
 
 --- middle
 
 # Introduction
 
-NORMATIVE
-While implementing Extended DNS Errors ({{!RFC8914}}) in our DNSSEC validating resolver software Unbound 
-   
-INFORMATIVE (ref to the ), we encountered this specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined. 
+While implementing Extended DNS Errors ({{!RFC8914}}) in our DNSSEC validating resolver software Unbound ({{UNBOUNDPR}}), we encountered this specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined. 
 
 
 

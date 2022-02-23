@@ -15,9 +15,9 @@ today := $(shell TZ=UTC date +%Y-%m-%dT00:00:00Z)
 # 	    -e 's/@TODAY@/${today}/g'  $< | mmark > $@ || rm -f $@
 
 xml:
-	kramdown-rfc $(DOCNAME).md > $(DOCNAME).xml
+	kramdown-rfc2629 $(DOCNAME).md > $(DOCNAME).xml
 
-rfc:
+rfc: $(DOCNAME).xml
 	xml2rfc $(DOCNAME).xml
 
 clean:

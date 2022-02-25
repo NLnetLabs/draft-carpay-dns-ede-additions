@@ -1,5 +1,5 @@
-VERSION = 05
-DOCNAME = draft-carpay-extra-ede-codes-dnssec-bogus
+VERSION = 01
+DOCNAME = draft-carpay-extra-ede-codes-dnssec-bogus-00
 today := $(shell TZ=UTC date +%Y-%m-%dT00:00:00Z)
 
 # all: $(DOCNAME)-$(VERSION).txt $(DOCNAME)-$(VERSION).html

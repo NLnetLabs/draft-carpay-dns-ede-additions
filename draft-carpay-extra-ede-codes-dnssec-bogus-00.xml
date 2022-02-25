@@ -12,7 +12,7 @@
 ]>
 
 
-<rfc docName="draft-carpay-extra-ede-codes-dnssec-bogus" category="exp" submissionType="IETF" ipr="trust200902">
+<rfc docName="draft-carpay-extra-ede-codes-dnssec-bogus-00" category="exp" submissionType="IETF" ipr="trust200902">
   <front>
     <title abbrev="Extra DNSSEC EDE codes">Extra Extended DNS Error codes for DNSSEC status bogus</title>
 
@@ -37,7 +37,7 @@
 
     <abstract>
 
-      <t>While implementing Extended DNS Errors (RFC8914) in our DNSSEC validating resolver software Unbound, we encountered this specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined.</t>
+      <t>While implementing Extended DNS Errors (RFC8914) in our DNSSEC validating resolver software Unbound, we encountered this specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined. This draft serves as a reference for code points requests.</t>
 
     </abstract>
 
@@ -90,6 +90,11 @@ codes.</t>
 
 </section>
 
+<section anchor="security-considerations"><name>Security Considerations</name>
+
+<t>As this draft only seeks to add code points to the EDE registry, the security considerations as the same as in <xref target="RFC8914"/>.</t>
+
+</section>
 
   </middle>
 

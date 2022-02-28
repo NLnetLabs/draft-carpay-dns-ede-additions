@@ -37,7 +37,7 @@
 
     <abstract>
 
-      <t>While implementing Extended DNS Errors (RFC8914) in our DNSSEC validating resolver software Unbound, we encountered this specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined. This draft serves as a reference for code points requests.</t>
+      <t>While implementing Extended DNS Errors (RFC8914) in our DNSSEC validating resolver software Unbound, we encountered these specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined. This draft serves as a reference for the request of Extended DNS Error Codes in the IANA registry.</t>
 
     </abstract>
 
@@ -50,7 +50,7 @@
 
 <section anchor="introduction"><name>Introduction</name>
 
-<t>While implementing Extended DNS Errors (<xref target="RFC8914"/>) in our DNSSEC validating resolver software Unbound (<xref target="UNBOUNDPR"/>), we encountered this specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined.</t>
+<t>While implementing Extended DNS Errors (<xref target="RFC8914"/>) in our DNSSEC validating resolver software Unbound (<xref target="UNBOUNDPR"/>), we encountered these specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined. This document serves as a reference for the request of Extended DNS Error Codes in the IANA registry.</t>
 
 <section anchor="extended-dns-error-code-26-signature-wrong-size"><name>Extended DNS Error Code 26 - Signature Wrong Size</name>
 
@@ -92,7 +92,7 @@ codes.</t>
 
 <section anchor="security-considerations"><name>Security Considerations</name>
 
-<t>As this draft only seeks to add code points to the EDE registry, the security considerations as the same as in <xref target="RFC8914"/>.</t>
+<t>As this draft only seeks to add code points to the EDE registry, the security considerations are the same as in <xref target="RFC8914"/>.</t>
 
 </section>
 

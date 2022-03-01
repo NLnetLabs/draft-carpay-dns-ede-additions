@@ -12,7 +12,7 @@
 ]>
 
 
-<rfc docName="draft-carpay-extra-ede-codes-dnssec-bogus-00" category="exp" submissionType="IETF" ipr="trust200902">
+<rfc ipr="trust200902" docName="draft-carpay-extra-ede-codes-dnssec-bogus-00" category="exp">
   <front>
     <title abbrev="Extra DNSSEC EDE codes">Extra Extended DNS Error codes for DNSSEC status bogus</title>
 
@@ -37,7 +37,10 @@
 
     <abstract>
 
-      <t>While implementing Extended DNS Errors (RFC8914) in our DNSSEC validating resolver software Unbound, we encountered these specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined. This draft serves as a reference for the request of Extended DNS Error Codes in the IANA registry.</t>
+
+<t>While implementing Extended DNS Errors in our DNSSEC validating resolver software Unbound, we encountered these specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined. This draft serves as a reference for the request of Extended DNS Error Codes in the IANA registry.</t>
+
+
 
     </abstract>
 
@@ -50,38 +53,42 @@
 
 <section anchor="introduction"><name>Introduction</name>
 
-<t>While implementing Extended DNS Errors (<xref target="RFC8914"/>) in our DNSSEC validating resolver software Unbound (<xref target="UNBOUNDPR"/>), we encountered these specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined. This document serves as a reference for the request of Extended DNS Error Codes in the IANA registry.</t>
+<t>While implementing Extended DNS Errors <xref target="RFC8914"/> in our DNSSEC validating resolver software Unbound <xref target="UnboundPR"/>, we encountered these specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined. This draft serves as a reference for the request of Extended DNS Error Codes in the IANA registry.</t>
 
-<section anchor="extended-dns-error-code-26-signature-wrong-size"><name>Extended DNS Error Code 26 - Signature Wrong Size</name>
+<section anchor="extended-dns-error-code-tbd-signature-wrong-size"><name>Extended DNS Error Code TBD - Signature Wrong Size</name>
 
 <t>The resolver attempted to perform DNSSEC validation, but the signature is either smaller or larger than expected for the specified algorithm.</t>
 
 </section>
-<section anchor="extended-dns-error-code-27-malformed-signer-name"><name>Extended DNS Error Code 27 - Malformed Signer Name</name>
+<section anchor="extended-dns-error-code-tbd-malformed-signer-name"><name>Extended DNS Error Code TBD - Malformed Signer Name</name>
 
 <t>The resolver attempted to perform DNSSEC validation, but the Signer's Name Field in the signature contains a malformed signer (d)name.</t>
 
 </section>
-<section anchor="extended-dns-error-code-28-signer-name-out-of-zone"><name>Extended DNS Error Code 28 - Signer Name Out of zone</name>
+<section anchor="extended-dns-error-code-tbd-signer-name-out-of-zone"><name>Extended DNS Error Code TBD - Signer Name Out of zone</name>
 
 <t>The resolver attempted to perform DNSSEC validation, but the Signer's Name Field in the signature does not contain the zone name of the covered RRset.</t>
 
 </section>
-<section anchor="extended-dns-error-code-29-signature-label-count-wrong"><name>Extended DNS Error Code 29 - Signature Label Count Wrong</name>
+<section anchor="extended-dns-error-code-tbd-signature-label-count-wrong"><name>Extended DNS Error Code TBD - Signature Label Count Wrong</name>
 
 <t>The resolver attempted to perform DNSSEC validation, but the number of labels in the Signature Labels Field is incorrect.</t>
 
 </section>
-<section anchor="extended-dns-error-code-30-dnssec-insufficient-nsec-proof"><name>Extended DNS Error Code 30 - DNSSEC Insufficient NSEC Proof</name>
+<section anchor="extended-dns-error-code-tbd-dnssec-insufficient-nsec-proof"><name>Extended DNS Error Code TBD - DNSSEC Insufficient NSEC Proof</name>
 
 <t>The resolver attempted to perform DNSSEC validation, but the signed response does not have valid NSEC proof.</t>
 
 </section>
-<section anchor="extended-dns-error-code-31-dnssec-unknown-protocol"><name>Extended DNS Error Code 31 - DNSSEC Unknown Protocol</name>
+<section anchor="extended-dns-error-code-tbd-dnssec-unknown-protocol"><name>Extended DNS Error Code TBD - DNSSEC Unknown Protocol</name>
 
 <t>The resolver attempted to perform DNSSEC validation, but found a value not equal to 3 in the DNSKEY protocol number field as specified by RFC4034#section-2.1.2.</t>
 
 </section>
+</section>
+<section anchor="security-considerations"><name>Security Considerations</name>
+<t>As this draft only seeks to add code points to the EDE registry, the security considerations are the same as in <xref target="RFC891"/>.</t>
+
 </section>
 <section anchor="iana-considerations"><name>IANA Considerations</name>
 
@@ -90,11 +97,6 @@ codes.</t>
 
 </section>
 
-<section anchor="security-considerations"><name>Security Considerations</name>
-
-<t>As this draft only seeks to add code points to the EDE registry, the security considerations are the same as in <xref target="RFC8914"/>.</t>
-
-</section>
 
   </middle>
 
@@ -123,12 +125,26 @@ codes.</t>
 
 
 
+<reference anchor='RFC891' target='https://www.rfc-editor.org/info/rfc891'>
+<front>
+<title>DCN Local-Network Protocols</title>
+<author fullname='D.L. Mills' initials='D.L.' surname='Mills'><organization/></author>
+<date month='December' year='1983'/>
+<abstract><t>This RFC provides a description of the DCN protocols for maintaining    connectivity, routing, and clock information in a local network.    These procedures may be of interest to the designers and implementers    of other local networks.</t></abstract>
+</front>
+<seriesInfo name='STD' value='44'/>
+<seriesInfo name='RFC' value='891'/>
+<seriesInfo name='DOI' value='10.17487/RFC0891'/>
+</reference>
+
+
+
 
     </references>
 
     <references title='Informative References'>
 
-<reference anchor="UNBOUNDPR" target="https://github.com/NLnetLabs/unbound/pull/604/">
+<reference anchor="UnboundPR" target="https://github.com/NLnetLabs/unbound/pull/604/">
   <front>
     <title>EDE for Unbound pull request</title>
     <author initials="T." surname="Carpay" fullname="Tom Carpay">
@@ -149,27 +165,29 @@ codes.</t>
   </back>
 
 <!-- ##markdown-source:
-H4sIAN8AFmIAA71WXW8TOxB9968Y1AdAYjf9Ehf2idIECQEB9UPVfULe9Wxi
-1WsvtjchVP3vzHi7uQk3tA9F7ENV2TNnzsycGSfLMhF1NFjA5Hv0kv+iVahg
-PD2HiffOQ+UUBqjpPzo7n5xCiDJ2AUo364KQZelxMbjfWUzGk95NKFdZ2RC8
-8rKOWSV9K1cZsnGGCrNklSkbAlZZj6hkJPub8cnF5FaIa1wtnVcFvLcRvcWY
-jRlJCGJh1VdpnCXrFYUSsotz5wsBmQD6tA0FXORwmmKmo57KhWs2D52fFTD9
-SNDwUZYhnWEjtSkguuaNNXRj6CK3Zgv6Kick5127AX2ljcFm8/we9GUy3g4g
-tKVKNzLqBVImcDl9+/lyOv5yViTPoVdUX27IpS1dZxW0nTHg8VuHISa7dSno
-6yn/JvndBLdd/p/Ubq8o/QxjAfMY21CMRjMd512ZV64ZJUs2HHU95RFTHr3c
-Px4JkWUZNFopg0LscZ+9U10VtbNCXM21QdBNSwzQRm1nOyQa4NnNzZOzd6ev
-Xh8c394+p/6A69Z6XUijSVTs6zE4s0APwdVxKT2uS0gI61oTxAtYIqCt6I5k
-R8HiXAcILVa61hUEHTvJDANBzqRXDB7nOIRMSh4GZTknBLBu13At+WpFVVRY
-a4sqB0Hf3t4u21OaFTh8CRmc65klaHK98o4in+sfVLsLir9OUMaITRuZuYMW
-Pavq14I4+wLKLibiYQ1JeSJ1jovUSOq8p2aD4d56spQW8DuVgZFZgsm3Lwud
-SDNznpyb/P4k/qEkPknDpOiW0yHwKantkVn0SE9DwoJ3Go1iMWwnWDkbJY0w
-SGjWHELP4Zl6zqJ/gP6rux7ckYbPFN7V8IN20d9IQDlayNbFIZN0zcHTwDIT
-PqjcIin37CxgfCCh11uiokFFQzek/V5gj0zKdk3JMqpJRoQchox+iRiGfNmg
-ct6Tyu7nfbRPvO8Cv7ehq2k2Na0JmPLJF+9c/QfGgozJv6Vh3yj9XC6w9+iD
-tRzsAbYH/7G9tNfWLS1zjK5y5hE067S/JJ93mLjRQyANex4NlSbXD5N/mWSK
-NnSkTvWWYWOCyxXQIj3ePzreoyeZo2SH+UF+mIu0nE+mJ5SMDVqh7xcgM6eO
-pfd9eINCCioDV4/XNrdegsXl+pdBzzbsWCFkIdKvgrx/GUpZXYuf703ut6gI
-AAA=
+H4sIAOIrHmIAA91W32/bNhB+519xQx62AZHtpsGw6mlZ7ALBOq+IXQR9Gijx
+ZBOhSI2k7LqB//fdUZbrpM7gLcMeZhiGQd59992vT8qyTEQdDeYw+RS95F+0
+ChWMpzOYeO88lE5hgIr+0dlscg0hytgGKNyiDUIWhcdV776zmIwnnZtQrrSy
+JnjlZRWzUvpGbjJk4wwVZskqUzYELLOEmI1GQslILg/jq/lkK8Q9btbOqxxu
+bERvMWZjBhNClGS3cH6TA35qhG58DtG3IV6MRm9GF886UgJW/S6NsxRlQyyF
+bOPS+VxAJoA+2oYc5gO4TnTTUZfF3NWHh84vcpi+I2R4J4uQzrCW2hAPV/9k
+Dd0YuhhY8wj6bkBIzrvmAPpOG4P14flfoK+T8eMAQltqUi2jXiFlAh9s4Vqr
+3t/mybNvM7WGe7m7haY1Bjz+0WKIyW5fCvp0lJ9J/jjBxy5fJ3XcK0q/wJjD
+MsYm5MPhQsdlWwxKVw+TJRsO247ykCkPfxhdDoXIsgzoiqappHm4W2qDoOuG
+YqKN2i6OzHOgFoBr99O8kkbTvLGxx+DMCj0EV8W19NhX6RzWCGhL+k+DRGhx
+iQEhNFjqSpcQdGwJwtlAGAvpFaORTR8jDXa/N+slQYB1x3ZtzVcbqozCSltU
+NCdLHbrlgYB+RZso6UthKjK1JaZmcqhdD8FVx4Cv0xJT5mx6czW9YqKaCrcZ
+QFfGWitlUIgz3hbvVFtyQicX9eHhm9u31z++eXW53f6DCpP/fl632/97vanK
+Z895wfznMWQw0wtL9InenXeU3Ux/pubMU+BdDWWMWDeRy+OgQc/b/7Tmzp5D
+0cZEI+whKUWkDeM+1JI21NNSguEd5NykZTnFkpH7bHelpxNpSHHJuR6ckMWv
+0jAruuZ8CH1KsvDCNDqkb0PCgrcajeoL/SXD0tkoSWupdfWeQ+g4fKe+Z3U6
+hf8Ba/itTc3+TE+N/yID5WiArIt9KumagydpZSZ8ULpVWpDb24Dx1Iy6AKSp
+aOiKdqybsRdmZdu64EmqaJIIeT/9TyKGPmE2KJ33NGinEN9FvrGhrUgDNGkR
+TPnkvXeu+hdWg4zJvyFROSj+Uq6w8+iCNRzsb9D9YO+tW1smGV3pzAt4Vkkn
+JZ+3mMiRAknDnq/7WpPrL5OPzDJF63tSpYqTkH1Z42IDpNeXo9eXZ/TqxVGy
+i8GrwQXnBjDDsqUl31BGNmiFvlNbAVeB4uwV0lmzIZnE+8AspFLprQ8ap21M
+R8yJ3zh68Tvvqt2jl4/QgZ8H6Z4HXKYB2j9WttvELEnpE1LiQLN3qhwSjgzc
+V35q8VRKsLjev5p2ZQxHBI4sRHotHXQPxkKW9+JPJpFh4CkLAAA=
 
 -->
 

@@ -1,7 +1,7 @@
 ---
 title: Extra Extended DNS Error codes for DNSSEC status bogus
 abbrev: Extra DNSSEC EDE codes
-docname: draft-carpay-extra-ede-codes-dnssec-bogus-00
+docname: draft-carpay-extra-ede-codes-dnssec-bogus-01
 date: {DATE}
 
 keyword: Internet-Draft

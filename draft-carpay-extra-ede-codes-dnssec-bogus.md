@@ -1,7 +1,7 @@
 ---
 title: Extra Extended DNS Error codes for DNSSEC status bogus
 abbrev: Extra DNSSEC EDE codes
-docname: draft-carpay-extra-ede-codes-dnssec-bogus-01
+docname: @DOCNAME@
 date: {DATE}
 
 keyword: Internet-Draft
@@ -26,7 +26,7 @@ author:
 
 informative:
   UnboundPR:
-    title: EDE for Unbound pull request
+    title: Extra needed Extended DNS Errors with DNSSEC Validation
     author:
     -
       name: Tom Carpay
@@ -73,7 +73,7 @@ The resolver attempted to perform DNSSEC validation, but the signed response doe
 The resolver attempted to perform DNSSEC validation, but found a value not equal to 3 in the DNSKEY protocol number field as specified by RFC4034#section-2.1.2.
 
 #  Security Considerations
- As this draft only seeks to add code points to the EDE registry, the security considerations are the same as in {{!RFC891}}.
+ As this draft only seeks to add code points to the EDE registry, the security considerations are the same as in {{!RFC8914}}.
 
 # IANA Considerations
 

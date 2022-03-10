@@ -1,24 +1,20 @@
 VERSION = 01
-DOCNAME = draft-carpay-extra-ede-codes-dnssec-bogus-00
-today := $(shell TZ=UTC date +%Y-%m-%dT00:00:00Z)
+I-D = draft-carpay-extra-ede-codes-dnssec-bogus
+DOCNAME = $(I-D)-$(VERSION)
 
-# all: $(DOCNAME)-$(VERSION).txt $(DOCNAME)-$(VERSION).html
+all: $(DOCNAME).html $(DOCNAME).txt
 
-# $(DOCNAME)-$(VERSION).txt: $(DOCNAME).xml
-# 	xml2rfc --text -o $@ $<
+$(I-D).mkd: $(I-D).md
+	sed 's/@DOCNAME@/$(DOCNAME)/g' $< >$@
 
-# $(DOCNAME)-$(VERSION).html: $(DOCNAME).xml
-# 	xml2rfc --html -o $@ $<
+$(DOCNAME).html: $(DOCNAME).xml
+	xml2rfc --html $<
 
-# $(DOCNAME).xml: $(DOCNAME).md
-# 	sed -e 's/@DOCNAME@/$(DOCNAME)-$(VERSION)/g' \
-# 	    -e 's/@TODAY@/${today}/g'  $< | mmark > $@ || rm -f $@
+$(DOCNAME).txt: $(DOCNAME).xml
+	xml2rfc --text $<
 
-xml:
-	kramdown-rfc2629 $(DOCNAME).md > $(DOCNAME).xml
-
-rfc: $(DOCNAME).xml
-	xml2rfc $(DOCNAME).xml
+$(DOCNAME).xml: $(I-D).mkd
+	kramdown-rfc2629 $< > $@
 
 clean:
-	rm -f $(DOCNAME).xml $(DOCNAME)-$(VERSION).txt $(DOCNAME)-$(VERSION).html
+	rm -f $(DOCNAME).html $(DOCNAME).txt $(DOCNAME).xml

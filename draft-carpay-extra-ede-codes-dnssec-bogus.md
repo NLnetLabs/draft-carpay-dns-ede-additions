@@ -70,7 +70,7 @@ The resolver attempted to perform DNSSEC validation, but the signed response doe
 
 ## Extended DNS Error Code TBD - DNSSEC Unknown Protocol
 
-The resolver attempted to perform DNSSEC validation, but found a value not equal to 3 in the DNSKEY protocol number field as specified by RFC4034#section-2.1.2.
+The resolver attempted to perform DNSSEC validation, but found a value not equal to 3 in the DNSKEY protocol number field as specified by {{!RFC4034, Section 2.1.2}}
 
 #  Security Considerations
  As this draft only seeks to add code points to the EDE registry, the security considerations are the same as in {{!RFC8914}}.

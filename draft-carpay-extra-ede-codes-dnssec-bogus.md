@@ -1,5 +1,5 @@
 ---
-title: Extra Extended DNS Error codes for DNSSEC status bogus
+title: Extra needed Extended DNS Error codes for DNSSEC
 abbrev: Extra DNSSEC EDE codes
 docname: @DOCNAME@
 date: {DATE}
@@ -38,15 +38,20 @@ informative:
 
 --- abstract
 
-While implementing Extended DNS Errors in our DNSSEC validating resolver software Unbound, we encountered these specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined. This draft serves as a reference for the request of Extended DNS Error Codes in the IANA registry. 
+This document serves as the reference for a request to the Internet Assigned Numbers Authority for entries to be added to the Extended DNS Error Codes registry on the Domain Name System (DNS) Parameters web page.
 
 --- middle
 
 # Introduction
 
-While implementing Extended DNS Errors {{!RFC8914}} in our DNSSEC validating resolver software Unbound {{UnboundPR}}, we encountered these specific situations regarding the DNSSEC bogus status where no Extended DNS Error were yet defined. This draft serves as a reference for the request of Extended DNS Error Codes in the IANA registry. 
+Extended DNS Errors (EDE) {{!RFC8914}} are a mechanism to return additional information about the cause of DNS errors.
+The more specific the cause of such errors can be indicated, the better the error conditions can be treated.
+While implementing EDE in our DNSSEC validating resolver software Unbound {{UnboundPR}}, we encountered DNSSEC bogus error conditions for which no specific EDE INFO-CODEs are yet defined.
+This document enumerates those conditions with the goal to be used as a reference for the request to add entries for those error conditions to the IANA Extended DNS Error Codes registry on the Domain Name System (DNS) Parameters web page.
 
+# DNSSEC bogus error conditions
 
+The encountered error conditions for which no EDE INFO-CODE was defined yet are defined in the following subsections.
 
 ## Extended DNS Error Code TBD - Signature Wrong Size
 

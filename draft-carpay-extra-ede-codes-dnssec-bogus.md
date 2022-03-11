@@ -6,11 +6,11 @@ date: {DATE}
 
 keyword: Internet-Draft
 
-
-category: exp
+category: info
 ipr: trust200902
 keyword: Internet-Draft
 stand_alone: yes
+submissionType: independent
 
 author:
  -

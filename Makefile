@@ -4,7 +4,7 @@ DOCNAME = $(I-D)-$(VERSION)
 
 all: $(DOCNAME).html $(DOCNAME).txt
 
-$(I-D).mkd: $(I-D).md
+$(I-D).mkd: $(I-D).mkd.in
 	sed 's/@DOCNAME@/$(DOCNAME)/g' $< >$@
 
 $(DOCNAME).html: $(DOCNAME).xml

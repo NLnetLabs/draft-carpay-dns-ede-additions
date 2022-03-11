@@ -1,6 +1,6 @@
 ---
-title: Extra needed Extended DNS Error codes for DNSSEC
-abbrev: Extra DNSSEC EDE codes
+title: Additional Extended DNS Error codes for DNSSEC
+abbrev: Additional DNSSEC EDE codes
 docname: @DOCNAME@
 date: {DATE}
 
@@ -26,7 +26,7 @@ author:
 
 informative:
   UnboundPR:
-    title: Extra needed Extended DNS Errors with DNSSEC Validation
+    title: Additional Extended DNS Errors with DNSSEC Validation
     author:
     -
       name: Tom Carpay
@@ -46,6 +46,7 @@ This document serves as the reference for a request to the Internet Assigned Num
 
 Extended DNS Errors (EDE) {{!RFC8914}} are a mechanism to return additional information about the cause of DNS errors.
 The more specific the cause of such errors can be indicated, the better the error conditions can be treated.
+
 While implementing EDE in our DNSSEC validating resolver software Unbound {{UnboundPR}}, we encountered DNSSEC bogus error conditions for which no specific EDE INFO-CODEs are yet defined.
 This document enumerates those conditions with the goal to be used as a reference for the request to add entries for those error conditions to the IANA Extended DNS Error Codes registry on the Domain Name System (DNS) Parameters web page.
 
@@ -78,11 +79,21 @@ The resolver attempted to perform DNSSEC validation, but the signed response doe
 The resolver attempted to perform DNSSEC validation, but found a value not equal to 3 in the DNSKEY protocol number field as specified by {{!RFC4034, Section 2.1.2}}
 
 #  Security Considerations
- As this draft only seeks to add code points to the EDE registry, the security considerations are the same as in {{!RFC8914}}.
+
+This document only adds new code points to the EDE registry.
+No additional security considerations apply besides the ones for Extended DNS Errors in general as set out in {{!RFC8194}}.
 
 # IANA Considerations
 
-This draft requests the assignment of a new EDE code values for the specified EDE
-codes.
+This document defines new entries in the "Extended DNS Error Codes" registry on the "Domain Name System (DNS) Parameters" web page:
+
+| INFO-CODE | Purpose                        | Reference        |
+|-----------|--------------------------------|------------------|
+| TBD       | Signature Wrong Size           | \[this document] |
+| TBD       | Malformed Signer Name          | \[this document] |
+| TBD       | Signer Name Out of zone        | \[this document] |
+| TBD       | Signature Label Count Wrong    | \[this document] |
+| TBD       | DNSSEC Insufficient NSEC Proof | \[this document] |
+| TBD       | DNSSEC Unknown Protocol        | \[this document] |
 
 --- back

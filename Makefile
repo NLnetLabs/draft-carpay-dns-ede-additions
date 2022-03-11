@@ -8,13 +8,13 @@ $(I-D).mkd: $(I-D).md
 	sed 's/@DOCNAME@/$(DOCNAME)/g' $< >$@
 
 $(DOCNAME).html: $(DOCNAME).xml
-	xml2rfc --html $<
+	xml2rfc --v3 --html $<
 
 $(DOCNAME).txt: $(DOCNAME).xml
-	xml2rfc --text $<
+	xml2rfc --v3 --text $<
 
 $(DOCNAME).xml: $(I-D).mkd
 	kramdown-rfc2629 $< > $@
 
 clean:
-	rm -f $(DOCNAME).html $(DOCNAME).txt $(DOCNAME).xml
+	rm -f $(DOCNAME).html $(DOCNAME).txt $(DOCNAME).xml $(DOCNAME).mkd
